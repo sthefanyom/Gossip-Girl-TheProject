@@ -30,8 +30,8 @@ export class PostagemController {
   }
   @Get('/titulo/:titulo')
   @HttpCode(HttpStatus.OK)
-  findByTitulo(@Param('titulo') titulo: string): Promise<Postagem[]> {
-    return this.postagemService.findByTitulo(titulo);
+  FindAllByTitulo(@Param('titulo') titulo: string): Promise<Postagem[]> {
+    return this.postagemService.findAllByTitulo(titulo);
   }
   @Post()
   @HttpCode(HttpStatus.CREATED)
